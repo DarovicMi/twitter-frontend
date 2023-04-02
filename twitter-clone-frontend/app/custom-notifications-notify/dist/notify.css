@@ -1,0 +1,107 @@
+:root {
+  --info-color: #4fa0d6f0;
+  --info-color-hover: #3498db;
+  --success-color: #76c798f0;
+  --success-color-hover: #2ecc71;
+  --warning-color: #ecad48f0;
+  --warning-color-hover: #f39c12;
+  --error-color: #e74c3cf0;
+  --error-color-hover: #e74c3c;
+  --notify-color: #555555f0;
+  --notify-color-hover: #333;
+  --text-color: #fff;
+}
+
+.notify__container p {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper__notify {
+  box-sizing: border-box;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  position: fixed;
+  margin: 2rem;
+  font-size: 2rem;
+}
+
+.notify__container {
+  background-color: var(--info-color);
+  padding: 2rem;
+  border-radius: 0.25rem;
+  width: 450px;
+  max-width: 450px;
+  min-width: 450px;
+}
+.notify__container:not(.notify__container:first-of-type) {
+  margin: 1rem 0;
+}
+
+.notify__container:hover {
+  background-color: var(--info-color-hover);
+}
+
+.notify__container > .notify__close {
+  width: 100%;
+  height: 1rem;
+  position: relative;
+}
+
+.notify__close::before,
+.notify__close::after {
+  content: "";
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.notify__close::before {
+  transform: rotate(45deg);
+}
+.notify__close::after {
+  transform: rotate(-45deg);
+}
+
+.notify__container > .notify__title {
+  color: var(--text-color);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.notify__container > .notify__description {
+  color: var(--text-color);
+}
+
+.hRight {
+  right: 0;
+}
+
+.hLeft {
+  left: 0;
+}
+
+.vTop {
+  top: 0;
+}
+
+.vBottom {
+  bottom: 0;
+}
+
+.notify__show {
+  animation-name: notifyShow;
+  animation-duration: 0.15s;
+  animation-timing-function: linear;
+}
+
+@keyframes notifyShow {
+  from {
+    transform: translateY(-100px);
+  }
+}

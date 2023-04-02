@@ -1,0 +1,466 @@
+main {
+  flex: 0.7;
+}
+
+.search-section-loggedin {
+  display: none;
+  padding: 2.4rem;
+  flex: 0.5;
+}
+.search-form {
+  text-align: center;
+}
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+  min-height: calc(100% - 7rem);
+  display: flex;
+  justify-content: space-between;
+  gap: 6.4rem;
+}
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 50rem;
+  height: 5rem;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.search-input {
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--color-text);
+  background-color: transparent;
+  outline: none;
+}
+
+.search-btn[type="submit"] {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-gray);
+  border-radius: 0 25px 25px 0;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-btn[type="submit"]:hover {
+  background-color: var(--color-primary-tint-dark);
+}
+
+.main {
+  padding: 2.4rem 5rem;
+  border-left: 1px solid var(--color-gray);
+  border-right: 1px solid var(--color-gray);
+  position: relative;
+}
+
+.tweets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--color-white);
+  height: auto;
+  padding-bottom: 7rem;
+}
+
+.tweet-body {
+  padding: 1.6rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--color-white);
+}
+
+.tweet-body:hover {
+  background-color: #f8f8ff;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.tweet-header .user-information {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.tweet-username {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.tweet-user-image {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.tweet-timestamp {
+  font-size: 1.4rem;
+  color: gray;
+}
+
+.tweet-message {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  padding-left: 0.6rem;
+  width: calc(1.8rem * 30);
+  word-wrap: break-word;
+}
+
+.tweet-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6.4rem;
+  position: relative;
+}
+
+.comment-number {
+  position: absolute;
+  left: 20rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.tweet-body-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.tweet-ellipsis {
+  position: relative;
+  display: inline-block;
+}
+.tweet-btns-container {
+  opacity: 0;
+  transform: translateY(-10px);
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 15rem;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  padding: 1.2rem 1.6rem;
+  z-index: 1;
+}
+.open {
+  animation: openAnimation 0.3s forwards;
+}
+
+.close {
+  animation: closeAnimation 0.3s forwards;
+}
+
+@keyframes openAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes closeAnimation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.elipse {
+  display: none;
+  transition: all 0.2s ease-in-out;
+  padding: 0.2rem;
+}
+
+.elipse:hover {
+  background-color: var(--color-primary-tint);
+  border-radius: 50%;
+}
+.tweet-btn-edit {
+  margin-bottom: 1rem;
+}
+.tweet-btn-edit,
+.tweet-btn-delete {
+  width: 100%;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: gray;
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.edit-btn {
+  background-color: var(--color-primary-tint-dark);
+  color: var(--color-white);
+}
+
+.delete-btn {
+  background-color: #ff8080;
+  color: var(--color-white);
+}
+
+.edit-btn:hover {
+  background-color: var(--color-primary);
+}
+
+.delete-btn:hover {
+  background-color: #ff6666;
+}
+
+.tweet-edit-input {
+  display: none;
+  border-radius: 5px;
+  border: 1px solid var(--color-primary);
+  padding: 0.6rem;
+  font-family: inherit;
+  width: 100%;
+  min-height: 10rem;
+  padding: 1.2rem 1.6rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  background-color: var(--color-white);
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.tweet-edit-input:focus {
+  border-color: #3f51b5;
+}
+
+.tweet-save-cancel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.tweet-edit-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1.6rem;
+  gap: 1.2rem;
+}
+
+.warning {
+  font-size: 1.2rem;
+  color: #ff6666;
+  margin-top: 0.6rem;
+}
+
+.tweet-save-btn,
+.tweet-cancel-btn {
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+  display: none;
+  width: 25%;
+}
+
+.tweet-save-btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.tweet-cancel-btn {
+  background-color: var(--color-ccc);
+  color: var(--color-white);
+}
+
+.tweet-save-btn:hover {
+  background-color: var(--color-primary-tint-dark);
+}
+.tweet-cancel-btn:hover {
+  background-color: #bbb;
+}
+.edited {
+  display: none;
+  font-size: 1.2rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  text-align: center;
+  background-color: white;
+  margin: 15% auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 15%;
+  font-size: 1.4rem;
+}
+
+.modal-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.modal-btn {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 45%;
+  transition: all 0.2s ease-out;
+}
+#yesBtn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+#noBtn {
+  background-color: var(--color-ccc);
+  color: var(--color-white);
+}
+
+#yesBtn:hover {
+  background-color: var(--color-primary-tint-dark);
+}
+
+#noBtn:hover {
+  background-color: #bbb;
+}
+.footer {
+  height: 7rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding-top: 1.2rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.heading-secondary {
+  font-size: 2.4rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.footer-description {
+  font-size: 1.6rem;
+}
+
+.footer-container .footer-btn .btn-signin,
+.footer-container .footer-btn .btn-logout {
+  color: var(--color-white);
+  margin-right: 0.8rem;
+}
+
+.footer-container .footer-btn .btn-signin:hover,
+.footer-container .footer-btn .btn-logout:hover {
+  background-color: var(--color-primary-tint-dark);
+}
+
+.footer-container .footer-btn .btn-signup,
+.footer-container .footer-btn .btn-signin {
+  padding: 0.6rem 3.2rem;
+}
+
+.footer-container .footer-btn .btn-signup {
+  color: var(--color-text);
+  background-color: var(--color-white);
+}
+
+.footer-container .footer-btn .btn-signup:hover {
+  background-color: var(--color-gray);
+}
+
+.btn-logout:link,
+.btn-logout:visited,
+.cta-btn:link,
+.cta-btn:visited {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 1.4rem;
+  border: 1px solid var(--color-gray);
+  border-radius: 15px;
+  display: inline-block;
+  padding: 0.8rem 8rem;
+  transition: all 0.3s;
+}
+
+.btn-logout:hover,
+.btn-logout:active,
+.cta-btn:hover,
+.cta-btn:active {
+  background-color: var(--color-gray);
+}
+
+.like-count {
+  position: absolute;
+  right: 16.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.liked {
+  color: red;
+}

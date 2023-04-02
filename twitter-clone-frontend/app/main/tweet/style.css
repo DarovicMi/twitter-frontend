@@ -1,0 +1,22 @@
+.arrow-back-icon {
+  font-size: 2.4rem;
+  position: absolute;
+  left: 2rem;
+  top: 7.5rem;
+  cursor: pointer;
+  padding: 0.6rem;
+  transition: all 0.2s ease-out;
+}
+
+.arrow-back-icon:hover {
+  background-color: var(--color-ccc);
+  border-radius: 50%;
+}
+
+.tweet-body {
+  cursor: default;
+}
+
+.tweet-body:hover {
+  background-color: transparent;
+}

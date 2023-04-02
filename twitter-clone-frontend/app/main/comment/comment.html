@@ -1,0 +1,62 @@
+<section class="create-comment-section">
+  <div class="comment-reply">
+    <span class="replying-to">
+      <span class="tweet-user"></span>
+    </span>
+  </div>
+  <div class="comment-header">
+    <a href="#" class="comment-link">
+      <img
+        class="comment-img"
+        src="../../../../assets/user.png"
+        alt="User Image"
+      />
+    </a>
+    <textarea
+      class="comment-textarea"
+      autofocus
+      placeholder="Tweet your reply..."
+    ></textarea>
+  </div>
+  <div class="comment-btn-container">
+    <button class="comment-btn" disabled>Reply</button>
+  </div>
+</section>
+
+<section class="section-comments">
+  <div class="comments">
+    <div class="comment-header space-between p-small">
+      <div>
+        <a href="#" class="comment-link">
+          <img
+            class="comment-img fix"
+            src="../../../../assets/user.png"
+            alt="User Image"
+          />
+        </a>
+        <div class="comment-reply">
+          <span class="replying-to m-left-sm"
+            >Replying to
+            <span class="tweet-user">@Unknown</span>
+          </span>
+        </div>
+        <p class="comment-username m-left-sm">@Unknown</p>
+      </div>
+      <p class="timestamp">timestamp</p>
+      <div class="ellipsis-container">
+        <span class="comment-ellipsis">⋮</span>
+        <div class="dropdown-container" style="display: none">
+          <button class="edit-comment-btn edit-btn">Edit</button>
+          <button class="delete-comment-btn delete-btn">Delete</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="comment-text">Unknown</p>
+    </div>
+  </div>
+</section>
+
+<!-- <script src="./comment.js"></script>
+    <script src="../loadTemplate.js"></script>
+    <script src="../../custom-notifications-notify/dist/notify.js"></script> -->

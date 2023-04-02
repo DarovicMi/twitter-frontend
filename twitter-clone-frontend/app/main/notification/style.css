@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  padding: 3.2rem;
+  color: var(--color-text);
+}
+
+.notification-link {
+  background-color: var(--color-accent);
+}
+
+.notifications-list {
+  list-style: decimal;
+  padding: 2.4rem;
+}
+
+.heading-primary {
+  font-size: 4rem;
+}
+.notification-item {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.tweet-user {
+  color: var(--color-primary);
+  cursor: pointer;
+}

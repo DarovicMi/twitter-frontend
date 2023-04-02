@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../custom-notifications-notify/dist/notify.css"
+    />
+    <link rel="stylesheet" href="../templates/navbar/navbar.css" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <div class="profile-container">
+      <div class="profile-header">
+        <div class="header"></div>
+        <div class="user-info">
+          <div class="avatar-username-container">
+            <img class="avatar" src="../../../assets/user.png" alt="Avatar" />
+            <span class="username">Unknown User</span>
+          </div>
+          <div>
+            <p class="bio">
+              Bio: Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Molestias voluptatum, dolorem nihil, ab nemo saepe placeat sed
+              dicta debitis mollitia dignissimos eos. Aut dicta enim impedit
+              laborum deserunt doloribus mollitia!
+            </p>
+          </div>
+          <div>
+            <p class="account-status">
+              Account status: <span class="status-value"></span>
+            </p>
+            <p class="account-type">
+              Account type: <span class="type-value"></span>
+            </p>
+
+            <p class="creation-date">
+              Joined: <span class="date-value"> </span>
+            </p>
+            <p class="date-of-birth">
+              Date of birth: <span class="dob-value"></span>
+            </p>
+            <p class="email">Email: <span class="email-value"></span></p>
+            <p class="follow">
+              Followers: <span class="followers-count">0</span>
+            </p>
+            <p class="follow">
+              Followings: <span class="following-count">0</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="edit-btns-container">
+          <button class="profile-edit-btn">Edit Profile</button>
+          <button class="profile-edit-btn warning profile-edit-btn-password">
+            Change Password
+          </button>
+        </div>
+        <div class="follow-container">
+          <button class="btn follow-btn">Follow</button>
+        </div>
+      </div>
+
+      <div class="profile-background"></div>
+    </div>
+
+    <div class="modal-password">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <br />
+        <h2>Change Password</h2>
+        <h3 class="password-fail fail"></h3>
+        <h3 class="password-success success"></h3>
+        <form id="password-form">
+          <div class="form-group">
+            <label for="old-password">Old Password</label>
+            <input
+              type="password"
+              id="old-password"
+              name="old-password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="new-password"
+              >New Password<ion-icon
+                name="eye-off-outline"
+                class="password-toggle"
+              ></ion-icon
+            ></label>
+
+            <input
+              type="password"
+              id="new-password"
+              name="new-password"
+              class="password-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="repeat-password">Repeat New Password</label>
+            <input
+              type="password"
+              id="repeat-password"
+              name="repeat-password"
+              class="repeat-password"
+              required
+            />
+            <p id="password-match-error">Passwords do not match</p>
+          </div>
+          <div class="btn-container">
+            <button type="submit" class="modal-change-password-btn">
+              Change Password
+            </button>
+            <button type="button" class="cancel-btn">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-container">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 class="modal-title">Edit Profile</h2>
+          <span class="modal-close-btn">&times;</span>
+        </div>
+        <div class="modal-body">
+          <form class="edit-profile-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" value="JohnDoe" />
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value="johndoe@gmail.com"
+            />
+            <label for="account-type">Account Type:</label>
+            <select id="account-type" name="account-type">
+              <option value="PUBLIC" selected>PUBLIC</option>
+              <option value="PRIVATE">PRIVATE</option>
+            </select>
+            <label for="avatar">Avatar:</label>
+            <input type="file" id="avatar" name="avatar" />
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-delete-btn warning">Delete Account</button>
+          <button class="modal-save-btn">Save Changes</button>
+          <button class="modal-cancel-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-confirmation">
+      <div class="modal-content-confirmation">
+        <div class="modal-header-confirmation">
+          <h2>Confirmation</h2>
+          <button class="close-modal-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure?</p>
+        </div>
+        <div class="modal-footer">
+          <button class="yes-btn">Yes</button>
+          <button class="no-btn">No</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../loadTemplate.js"></script>
+    <script type="module" src="./profile.js"></script>
+    <script src="../../custom-notifications-notify/dist/notify.js"></script>
+  </body>
+</html>

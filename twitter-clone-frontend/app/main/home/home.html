@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is a Twitter clone built with HTML, CSS, and JavaScript."
+    />
+    <meta name="keywords" content="Twitter, clone, HTML, CSS, JavaScript" />
+    <meta name="author" content="Neamtiu Mihai" />
+    <link
+      rel="stylesheet"
+      href="../../custom-notifications-notify/dist/notify.css"
+    />
+    <link rel="stylesheet" href="../templates/tweet/shared.css" />
+    <link rel="stylesheet" href="../templates/navbar/navbar.css" />
+    <title>Twitter</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header"></header>
+
+      <main class="main">
+        <section class="search-section">
+          <form action="#" method="get" class="search-form">
+            <div class="search-bar">
+              <input type="text" class="search-input" placeholder="Search..." />
+              <button class="search-btn" type="submit">
+                <ion-icon class="icon" name="search-outline"></ion-icon>
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section class="section-tweet">
+          <div class="tweet">
+            <div class="tweet-user">
+              <a href="../profile/profile.html" class="profile-link">
+                <img class="feed-img" src="../../../assets/user.png" alt="" />
+              </a>
+              <div class="user-details">
+                <span class="username"></span>
+              </div>
+            </div>
+            <div class="tweet-textarea-box">
+              <textarea
+                maxlength="255"
+                placeholder="What's happening?"
+                class="tweet-textarea"
+              ></textarea>
+              <p class="warning"></p>
+            </div>
+            <div class="tweet-footer">
+              <div class="tweet-actions">
+                <ion-icon class="tweet-icon" name="image-outline"></ion-icon>
+                <ion-icon class="tweet-icon" name="camera-outline"></ion-icon>
+                <ion-icon
+                  class="tweet-icon"
+                  name="stats-chart-outline"
+                ></ion-icon>
+                <ion-icon class="tweet-icon" name="navigate-outline"></ion-icon>
+              </div>
+              <button class="tweet-btn">Tweet</button>
+            </div>
+          </div>
+          <div class="tweets-container tweet-list"></div>
+        </section>
+      </main>
+      <section class="search-section-loggedin">
+        <form action="#" method="get" class="search-form">
+          <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search..." />
+            <button class="search-btn" type="submit">
+              <ion-icon class="icon" name="search-outline"></ion-icon>
+            </button>
+          </div>
+        </form>
+      </section>
+      <section class="section-cta">
+        <div class="cta-info">
+          <h1 class="heading-primary">New to Twitter?</h1>
+          <p class="cta-description">
+            Sign up now to start tweeting and creating your own personalized
+            chronology!
+          </p>
+          <div class="cta-btn-container">
+            <a href="../signup/signup.html" class="cta-btn"
+              >Create an account</a
+            >
+          </div>
+          <p class="cta-terms">
+            By registering, you agree to the <a href="#">Terms of Use</a> and
+            <a href="#">Privacy Policy</a>, including the
+            <a href="#">Use of Cookies</a>.
+          </p>
+        </div>
+        <p class="copyright">&copy; 2023 Twitter Clone</p>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-text">
+          <h2 class="heading-secondary">Don't miss what's happening</h2>
+          <p class="footer-description">Twitter users get the news first.</p>
+        </div>
+        <div class="footer-btn">
+          <a href="../login/login.html" class="cta-btn btn-signin submit-btn"
+            >Sign in</a
+          >
+          <a href="../signup/signup.html" class="cta-btn btn-signup">Sign up</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="home.js"></script>
+    <script src="../loadTemplate.js"></script>
+    <script src="../../custom-notifications-notify/dist/notify.js"></script>
+  </body>
+</html>

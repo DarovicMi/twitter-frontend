@@ -1,0 +1,114 @@
+body {
+  background-color: #f5f8fa;
+  padding-top: 6.4rem;
+}
+.heading-primary {
+  color: var(--color-text);
+  font-size: 3.2rem;
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.8rem;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+  color: var(--color-text);
+  position: relative;
+}
+.form-label {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  opacity: 0.7;
+}
+.form-label::before {
+  content: "*";
+  color: red;
+  font-size: 1.6rem;
+  margin-right: 0.6rem;
+}
+.form-input {
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  border-radius: 0.9rem;
+  border: 1px solid #ccc;
+}
+.form-btn {
+  padding: 1.2rem;
+  margin-top: 2.4rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  transition: all 0.3s ease-in-out;
+}
+.form-btn:hover {
+  background-color: var(--color-primary-tint-dark);
+}
+
+.goback-btn:link,
+.goback-btn:visited {
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.goback-btn:hover,
+.goback-btn:active {
+  background-color: var(--color-white);
+}
+
+.password-toggle {
+  position: absolute;
+  top: 30%;
+  left: 95%;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.heading-secondary {
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.radio-group .radio-input[type="radio"] {
+  display: none;
+}
+
+.radio-group .radio-label {
+  display: inline-block;
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--color-text);
+  cursor: pointer;
+  border: 2px solid var(--color-ccc);
+  border-radius: 4px;
+}
+
+.radio-group .radio-input[type="radio"]:checked + .radio-label {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+#password-match-error {
+  display: none;
+  color: red;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  margin-top: -0.5rem;
+}

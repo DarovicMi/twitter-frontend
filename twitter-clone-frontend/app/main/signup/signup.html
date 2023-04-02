@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../custom-notifications-notify/dist/notify.css"
+    />
+    <title>Join our Twitter community</title>
+  </head>
+  <body>
+    <h1 class="heading-primary">
+      Create Your Twitter Account and Start Tweeting
+    </h1>
+    <form onsubmit="onSubmit(event)" class="form">
+      <label class="form-label" for="username">Username:</label>
+      <input
+        class="form-input"
+        type="text"
+        id="username"
+        name="username"
+        required
+      />
+
+      <label class="form-label" for="password">Password:</label>
+
+      <input
+        class="form-input password-input"
+        type="password"
+        id="password"
+        name="password"
+        required
+      />
+      <ion-icon name="eye-off-outline" class="password-toggle"></ion-icon>
+      <label class="form-label" for="repeat-password">Repeat Password:</label>
+
+      <input
+        type="password"
+        id="repeat-password"
+        name="repeat-password"
+        required
+        class="form-input repeat-password"
+      />
+      <p id="password-match-error">Passwords do not match</p>
+      <label for="email" class="form-label">Email:</label>
+      <input class="form-input" type="email" id="email" name="email" required />
+
+      <label class="form-label" for="dob">Date of Birth:</label>
+      <input class="form-input" type="date" id="dob" name="dob" required />
+
+      <h2 class="form-label heading-secondary">Account Type:</h2>
+      <div class="radio-group">
+        <input
+          class="radio-input"
+          type="radio"
+          id="public"
+          name="account-type"
+          value="PUBLIC"
+        />
+        <label class="radio-label" for="public">PUBLIC</label>
+        <input
+          class="radio-input"
+          type="radio"
+          id="private"
+          name="account-type"
+          value="PRIVATE"
+        />
+        <label class="radio-label" for="private">PRIVATE</label>
+      </div>
+
+      <button type="submit" class="form-btn submit-btn">Sign Up</button>
+      <a href="../home/home.html" class="form-btn goback-btn">Go back Home</a>
+    </form>
+
+    <script src="../../custom-notifications-notify/dist/notify.js"></script>
+    <script type="module" src="signup.js"></script>
+    <script src="../loadTemplate.js"></script>
+  </body>
+</html>

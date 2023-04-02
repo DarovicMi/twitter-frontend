@@ -1,0 +1,508 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  background-color: var(--color-gray);
+  color: var(--color-text);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--color-white);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+}
+
+.avatar {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.verified {
+  font-size: 2.4rem;
+  margin-top: 1.6rem;
+  margin-left: 1.2rem;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+.bio {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  flex: 0.5;
+  place-items: center;
+  row-gap: 2.4rem;
+  column-gap: 6.4rem;
+}
+
+.avatar-username-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.username {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: inline;
+}
+
+.account-type,
+.account-status,
+.creation-date,
+.date-of-birth,
+.email {
+  font-size: 1.6rem;
+  margin: 0.5rem 0;
+}
+
+.type-value,
+.status-value,
+.date-value,
+.dob-value,
+.email-value {
+  font-weight: bold;
+}
+
+.profile-edit-btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 1.2rem 2rem;
+  border-radius: 3rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  margin-left: 2.4rem;
+}
+
+.profile-edit-btn:hover {
+  background-color: var(--color-primary-tint-dark);
+  cursor: pointer;
+}
+
+.followers-count,
+.following-count,
+.follow {
+  font-size: 1.4rem;
+}
+
+.follow {
+  font-weight: 500;
+  margin-top: 0.6rem;
+}
+
+.followers-count,
+.following-count {
+  font-weight: 600;
+  color: var(--color-primary-tint-dark);
+}
+/* Modal */
+.modal-container {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+  background-color: var(--color-white);
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 50%;
+  max-width: 60rem;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.modal-title {
+  margin: 0;
+}
+.modal-open {
+  display: block;
+}
+.modal-close-btn {
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ccc;
+  transition: all 0.1s ease-in-out;
+}
+.modal-close-btn:hover {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  margin-bottom: 2rem;
+}
+
+.edit-profile-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.edit-profile-form input[type="text"],
+.edit-profile-form input[type="email"],
+.edit-profile-form select {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.edit-profile-form input[type="file"] {
+  margin-top: 1rem;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.modal-save-btn,
+.modal-cancel-btn,
+.modal-delete-btn {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  color: var(--color-white);
+  font-size: 1.6rem;
+  transition: all 0.3s;
+}
+
+.modal-save-btn {
+  background-color: var(--color-primary);
+}
+
+.modal-cancel-btn {
+  background-color: var(--color-ccc);
+}
+.modal-save-btn,
+.modal-cancel-btn {
+  flex: 1 1;
+}
+
+.modal-delete-btn {
+  flex: 0 1 27%;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--color-ccc);
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: inherit;
+  margin-top: 0.5rem;
+}
+
+.form-group input[type="file"] {
+  margin-top: 1rem;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.warning {
+  background-color: #d22b2b;
+}
+div .warning:hover,
+.warning:active {
+  background-color: #800020;
+  outline: 0;
+}
+
+.btn:hover {
+  background-color: var(--color-primary-tint-dark);
+}
+
+/*  Change Password modal */
+/* Modal styles */
+.modal-password {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-open-password {
+  display: block;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 30%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-right: 1rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Form styles */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  clear: both;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+input[type="password"] {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1.6rem;
+}
+
+.cancel {
+  background-color: #bbb;
+  color: black;
+}
+
+.cancel:hover {
+  background-color: #999;
+}
+.modal-change-password-btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 11px;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.modal-change-password-btn:hover {
+  background-color: var(--color-primary-tint-dark);
+}
+
+.cancel-btn {
+  background-color: #ccc;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.8rem 1.2rem;
+  transition: background-color 0.3s ease;
+  border-radius: 11px;
+}
+.btn-container {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+  justify-content: center;
+}
+.cancel-btn:hover {
+  background-color: #eee;
+}
+
+.password-toggle {
+  display: inline-block;
+  font-size: 1.8rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+#password-match-error {
+  display: none;
+  font-size: 1.4rem;
+  color: #800020;
+  margin-top: 0.3rem;
+}
+
+.password-fail,
+.password-success {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: none;
+}
+.fail {
+  color: #800020;
+}
+.success {
+  color: green;
+}
+
+/* Delete account */
+
+.modal-confirmation {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 13rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 1.4rem;
+}
+
+.modal-content-confirmation {
+  background-color: var(--color-white);
+  margin: 10% auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 20%;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header-confirmation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.close-modal-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: #aaaaaa;
+  transition: 0.1s all ease-in-out;
+}
+
+.close-modal-btn:hover {
+  color: #800020;
+}
+
+.modal-body {
+  margin-top: 2rem;
+}
+
+.modal-footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.yes-btn,
+.no-btn {
+  transition: all 0.2s ease-in;
+}
+.yes-btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+  border: none;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.no-btn {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+}
+
+.yes-btn:hover {
+  background-color: var(--color-primary);
+}
+
+.no-btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}

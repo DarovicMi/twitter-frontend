@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/notify.css">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css">
+    <title>Notify Custom Notification Plugin Examples</title>
+</head>
+<body>
+    <main>
+
+        <h1 class="title">Notify Custom Notification Plugin Examples</h1>
+        <div style="margin:30px auto"><div id="carbon-block"></div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2783044520727903"
+     crossorigin="anonymous"></script>
+<!-- CSSScript Demo Page -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-2783044520727903"
+     data-ad-slot="3025259193"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<p>A JavaScript library developed with vanilla JS, HTML, and CSS that allows you to create custom notifications.</p>
+        <section>
+            <h2>Notification Types</h2>
+            <div class="types__container">
+                <button class="types__item" data-notify="info">Info</button>
+                <button class="types__item" data-notify="success">success</button>
+                <button class="types__item" data-notify="warning">warning</button>
+                <button class="types__item" data-notify="error">error</button>
+                <button class="types__item" data-notify="notify">notify</button>
+            </div>
+        </section>
+    </main>
+    <script src="./dist/notify.js"></script>
+    <script>
+        const notifyBtn = document.querySelectorAll(".types__item");
+
+        notifyBtn.forEach(btn => {
+            btn.addEventListener('click', () => {
+                let type = btn.getAttribute('data-notify');
+                let title = `Notification ${type}.`;
+                let description = `
+                    This is ${type} notification.
+                    Check it on CSSScript.com:
+                    <a style="text-decoration:none; color:#fff; font-weight:bold;" href="https://www.cssscript.com/custom-notifications-notify">https://CSSScript.com</a>
+                    `;
+                
+                let notification = new Notify(title, description, type);
+            })
+        })
+    </script>
+    <script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CE7DC2JW&placement=wwwcssscriptcom";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LLWL5N9CSM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LLWL5N9CSM');
+</script>
+</body>
+</html>

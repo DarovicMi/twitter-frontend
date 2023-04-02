@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body { background: #fafafa; line-height: 1.6; }
+main{
+    max-width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+h1.title{
+    font-size: 3rem;
+}
+
+h1.title > sub{
+    font-size: 1rem;
+}
+
+p.attribution{
+    margin-bottom: 2rem;
+}
+
+section > h2{
+    font-size: 2rem;
+}
+section > p{
+    margin-bottom: 2rem;
+}
+
+.types__container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.types__item{
+    min-width: 10rem;
+    width: 10rem;
+    padding: .75rem 2rem;
+    font-size: 1.5rem;
+    background-color: var(--text-color);
+    transition: .2s;
+    cursor: pointer;
+}
+
+.types__item[data-notify="info"]{
+    border: solid var(--info-color-hover);
+    color: var(--info-color-hover);
+}
+.types__item[data-notify="info"]:hover{
+    background-color: var(--info-color-hover);
+    color: var(--text-color);
+}
+
+.types__item[data-notify="success"]{
+    border: solid var(--success-color-hover);
+    color: var(--success-color-hover);
+}
+.types__item[data-notify="success"]:hover{
+    background-color: var(--success-color-hover);
+    color: var(--text-color);
+}
+
+.types__item[data-notify="warning"]{
+    border: solid var(--warning-color-hover);
+    color: var(--warning-color-hover);
+}
+.types__item[data-notify="warning"]:hover{
+    background-color: var(--warning-color-hover);
+    color: var(--text-color);
+}
+
+.types__item[data-notify="error"]{
+    border: solid var(--error-color-hover);
+    color: var(--error-color-hover);
+}
+.types__item[data-notify="error"]:hover{
+    background-color: var(--error-color-hover);
+    color: var(--text-color);
+}
+
+.types__item[data-notify="notify"]{
+    border: solid var(--notify-color-hover);
+    color: var(--notify-color-hover);
+}
+.types__item[data-notify="notify"]:hover{
+    background-color: var(--notify-color-hover);
+    color: var(--text-color);
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="../../custom-notifications-notify/dist/notify.css"
+  />
+    <title>Log in</title>
+  </head>
+  <body>
+    
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form class="modal-form">
+      <label for="email" class="big-label">Email:</label>
+      <input type="email" id="email" name="email" class="modal-input" required>
+      <div class="modal-btn-container">
+        <button type="submit" class="submit-modal">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+<form class="form" method="get">
+      <h1 class="heading-primary">Welcome Back to Twitter: Log In to Your Account</h1>
+      <label class="form-label" for="username">Username:</label>
+      <input
+        class="form-input"
+        type="text"
+        id="username"
+        name="username"
+        required
+      />
+
+      <label class="form-label" for="password">Password:</label>
+
+      <input
+        class="form-input password-input"
+        type="password"
+        id="password"
+        name="password"
+        required
+      />
+      <div class="forgot-password-box">
+        <a href="#" class="forgot-password-link">Forgot Password?</a>
+      </div>
+
+
+      <button type="submit" class="form-btn submit-btn">Log in</button>
+      <a href="../home/home.html" class="form-btn goback-btn">Go back Home</a>
+      
+    <script src="../loadTemplate.js"></script>
+    <script src="../../custom-notifications-notify/dist/notify.js"></script>
+    <script  type="module" src="login.js"></script>
+  </body>
+</html>

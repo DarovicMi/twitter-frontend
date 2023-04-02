@@ -1,0 +1,48 @@
+.logo {
+  height: 4.8rem;
+}
+
+.logo-container {
+  padding: 2.4rem;
+}
+
+.sidebar {
+  margin-top: 3.2rem;
+}
+
+.active {
+  background-color: #ffa500 !important;
+}
+
+.sidebar-list {
+  padding: 2.4rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.twitter-logo {
+  align-self: center;
+  width: 6rem;
+  height: 6rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: var(--color-primary-tint-dark);
+}

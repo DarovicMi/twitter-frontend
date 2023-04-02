@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  box-shadow: 0 0 8px 2px var(--color-primary);
+}
+
+input:focus,
+button:focus,
+select:focus,
+a:focus {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+img {
+  object-fit: cover;
+}
+
+body {
+  font-family: "Golos Text", sans-serif;
+}

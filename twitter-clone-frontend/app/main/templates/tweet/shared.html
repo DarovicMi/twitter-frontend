@@ -1,0 +1,59 @@
+<section class="section-tweet">
+  <div class="tweets-container tweet-list">
+    <div class="tweet-body">
+      <div class="tweet-header">
+        <div class="user-information">
+          <a class="profile-link" href="../profile/profile.html"
+            ><img
+              class="tweet-user-image"
+              src="../../../assets/user.png"
+              alt="User image" /></a
+          ><span class="tweet-username">Unknown User</span>
+        </div>
+        <div><p class="tweet-timestamp">Unknown Date</p></div>
+        <div>
+          <span class="edited"><em>(edited)</em></span>
+        </div>
+        <div class="tweet-ellipsis">
+          <div class="tweet-btns-container">
+            <button class="tweet-btn-edit edit-btn">Edit</button
+            ><button class="tweet-btn-delete delete-btn">Delete</button>
+          </div>
+          <ion-icon
+            class="tweet-body-icon elipse"
+            name="ellipsis-vertical-outline"
+          ></ion-icon>
+        </div>
+      </div>
+      <p class="tweet-message"></p>
+      <form class="tweet-edit-form">
+        <textarea maxlength="255" class="tweet-edit-input" autofocus></textarea>
+        <p class="warning"></p>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <h2>Are you sure?</h2>
+            <div class="modal-btns">
+              <button class="modal-btn" id="yesBtn">Yes</button
+              ><button class="modal-btn" id="noBtn">No</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="tweet-save-cancel-container">
+        <button type="button" class="tweet-save-btn">Save</button>
+        <button type="button" class="tweet-cancel-btn">Cancel</button>
+      </div>
+      <div class="tweet-icons">
+        <ion-icon
+          class="tweet-body-icon comment"
+          name="chatbubble-outline"
+        ></ion-icon>
+        <ion-icon
+          class="tweet-body-icon share"
+          name="arrow-redo-outline"
+        ></ion-icon>
+        <ion-icon class="tweet-body-icon like" name="heart-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+</section>

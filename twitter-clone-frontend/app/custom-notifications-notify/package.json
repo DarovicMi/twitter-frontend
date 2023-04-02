@@ -1,0 +1,22 @@
+{
+  "name": "notify",
+  "version": "1.0.0",
+  "description": "Plugin to push custom notify. Created with ❤ in Vanilla JS.",
+  "main": "notify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "notify",
+    "vanilla-js",
+    "js",
+    "push",
+    "message",
+    "info",
+    "error",
+    "success",
+    "warn"
+  ],
+  "author": "Krystian Maj",
+  "license": "MIT"
+}
